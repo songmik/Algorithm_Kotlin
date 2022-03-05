@@ -1,7 +1,23 @@
 package com.example.algorithm
 
 
-//10171
+
+
+//2557번
+
+//fun main(args: Array<String>){
+//    println("Hello World!")
+//}
+
+
+//39906084번
+
+//fun main(args:Array<String>){
+//    println("강한친구 대한육군\n강한친구 대한육군")
+//}
+
+
+//10171번
 
 //fun main(args:Array<String>){
 //    println("\\    /\\\n" +
@@ -11,7 +27,7 @@ package com.example.algorithm
 //}
 
 
-//10172
+//10172번
 
 //fun main(args:Array<String>){
 //    println("|\\_/|\n" +
@@ -20,6 +36,25 @@ package com.example.algorithm
 //            "|\"^\"`    |\n" +
 //            "||_/=\\\\__|"
 //    )
+//}
+
+
+//1000번
+
+//import java.util.*
+//
+//fun main() = with(Scanner(System.`in`)){
+//    println(nextInt() + nextInt())
+//
+//}
+
+
+//1008번
+//import java.util.*
+//
+//fun main() = with(Scanner(System.`in`)){
+//    println(nextDouble() / nextDouble())
+//
 //}
 
 
