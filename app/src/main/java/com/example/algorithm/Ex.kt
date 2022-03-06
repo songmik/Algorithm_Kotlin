@@ -50,11 +50,41 @@ package com.example.algorithm
 
 
 //1008번
+
 //import java.util.*
 //
 //fun main() = with(Scanner(System.`in`)){
 //    println(nextDouble() / nextDouble())
 //
 //}
+
+
+//10869번
+
+//import java.util.*
+//
+//fun main() = with(Scanner(System.`in`)){
+//    val a = nextInt()
+//    val b = nextInt()
+//
+//    println(a + b)
+//    println(a - b)
+//    println(a * b)
+//    println(a / b)
+//    println(a % b)
+//}
+
+//실패한 코드
+//fun main() = with(Scanner(System.`in`)){
+//    println(nextInt() + nextInt())
+//    println(nextInt() - nextInt())
+//    println(nextInt() * nextInt())
+//    println(nextInt() / nextInt())
+//    println(nextInt() % nextInt())
+//}
+
+
+//
+
 
 
