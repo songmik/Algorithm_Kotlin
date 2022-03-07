@@ -84,7 +84,18 @@ package com.example.algorithm
 //}
 
 
+//10926번
+//fun main(args:Array<String>){
+//    println("${readLine()}??!")
 //
+//}
+
+//18108번
+//fun main(args:Array<String>){
+//    println((readLine()!!
+//        .toInt()
+//        .let { it - 543 }))
+//}
 
 
 
