@@ -2,7 +2,6 @@ package com.example.algorithm
 
 
 
-
 //2557번
 
 //fun main(args: Array<String>){
@@ -98,4 +97,32 @@ package com.example.algorithm
 //}
 
 
+//10430번
 
+//import java.util.*
+//
+//fun main() = with(Scanner(System.`in`)){
+//    val A = nextInt()
+//    val B = nextInt()
+//    val C = nextInt()
+//
+//    println((A+B)%C)
+//    println(((A%C) + (B%C))%C)
+//    println((A*B) %C)
+//    println(((A%C) * (B%C))%C)
+//}
+
+
+//2588번
+
+//import java.util.*
+//
+//fun main() = with(Scanner(System.`in`)){
+//    val a = nextInt()
+//    val b = nextInt()
+//
+//    println(a*(b % 10))
+//    println(a* (b %100 / 10))
+//    println(a* (b/ 100))
+//    println(a*b)
+//}
