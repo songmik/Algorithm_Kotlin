@@ -42,3 +42,55 @@ package com.example.algorithm
 
 //2753번
 
+//import java.util.*
+//
+//fun main() = with(Scanner(System.`in`)){
+//    val year = nextInt()
+//
+//    if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)){
+//        println("1")
+//    } else {
+//        println("0")
+//    }
+//}
+
+
+//14681번
+
+//import java.util.*
+//
+//fun main() = with(Scanner(System.`in`)){
+//    val x = nextInt()
+//    val y = nextInt()
+//
+//    if (x>0 && y>0) {
+//        println("1")
+//    } else if (x<0 && y>0){
+//        println("2")
+//    } else if (x<0 && y<0){
+//        println("3")
+//    } else {
+//        println("4")
+//    }
+//}
+
+
+//2884번
+
+//import java.time.LocalTime
+//import java.util.*
+//
+//fun main() = with(Scanner(System.`in`)){
+//    val h = nextInt()
+//    val m = nextInt()
+//
+//    val time = LocalTime.of(h,m).minusMinutes(45)
+//
+//    println("${time.hour} ${time.minute}")
+//}
+
+
+//2525번
+
+
+
