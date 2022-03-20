@@ -92,5 +92,24 @@ package com.example.algorithm
 
 //2525번
 
+//import java.util.*
+
+
+
+//2480번
+
+//import java.util.*
+//
+//fun main() = with(Scanner(System.`in`)){
+//    val a = nextInt()
+//    val b = nextInt()
+//    val c = nextInt()
+//
+//    if (a == b){
+//        println()
+//    }
+//}
+
+
 
 
