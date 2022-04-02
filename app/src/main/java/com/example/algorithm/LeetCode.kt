@@ -5,7 +5,7 @@ package com.example.algorithm
 
 
 //방법 1
-class Solution {
+class Solution_number1 {
     fun twoSum(nums: IntArray, target: Int) : IntArray {
         val map = mutableMapOf<Int, Int>()
         nums.forEachIndexed { index, int ->
@@ -17,7 +17,7 @@ class Solution {
 }
 
 //방법 2
-class SolutionTwo {
+class SolutionTwo_number1 {
     fun twoSum(nums: IntArray, target: Int) : IntArray {
         val map = mutableMapOf<Int, Int>()
         nums.forEachIndexed{ index, num ->
@@ -33,7 +33,7 @@ class SolutionTwo {
 }
 
 // 방법 3
-class SolutionThree{
+class SolutionThree_number1{
     fun twoSum(nums: IntArray, target: Int) :IntArray{
         val map : MutableMap<Int, Int> = mutableMapOf()
         nums.forEachIndexed { index, number ->
@@ -47,7 +47,7 @@ class SolutionThree{
 
 
 //방법 4
-class SolutionFore{
+class SolutionFore_number1 {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = hashMapOf<Int, Int>()
         nums.forEachIndexed { index, i ->
@@ -62,4 +62,9 @@ class SolutionFore{
 
 
 
-// 2.
+// 9. Pallindrome Number
+class Solution_number9 {
+    fun isPalindrome(x: Int) :Boolean =
+        x.toString().let{ it == it.reversed()
+    }
+}
