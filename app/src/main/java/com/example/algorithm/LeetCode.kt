@@ -65,6 +65,26 @@ class SolutionFore_number1 {
 // 9. Pallindrome Number
 class Solution_number9 {
     fun isPalindrome(x: Int) :Boolean =
-        x.toString().let{ it == it.reversed()
+        x.toString().let{ it == it.reversed() }
+}
+
+
+
+
+// 13. Roman to Integer
+class Solution_number13 {
+    fun romanToInt(s: String) : Int {
+        val map = mutableMapOf(
+            'I' to 1, 'V' to 5, 'X' to 10, 'L' to 50, 'C' to 100, 'D' to 500, 'M' to 1000
+        )
+        val number = 0
+        val last = 1000
+        s.forEach {
+            val value = map[it] ?: 0
+            if (value > last) number -= last*2
+            number += value
+            last = value
+        }
+        return number
     }
 }
