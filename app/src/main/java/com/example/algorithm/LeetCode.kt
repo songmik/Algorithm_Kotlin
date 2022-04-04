@@ -6,7 +6,7 @@ package com.example.algorithm
 
 //방법 1
 class Solution_number1 {
-    fun twoSum(nums: IntArray, target: Int) : IntArray {
+    fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = mutableMapOf<Int, Int>()
         nums.forEachIndexed { index, int ->
             map[int]?.let { return intArrayOf(it, index) }
@@ -18,9 +18,9 @@ class Solution_number1 {
 
 //방법 2
 class SolutionTwo_number1 {
-    fun twoSum(nums: IntArray, target: Int) : IntArray {
+    fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = mutableMapOf<Int, Int>()
-        nums.forEachIndexed{ index, num ->
+        nums.forEachIndexed { index, num ->
             val com = target - num
             val other = map.get(com)
             when {
@@ -33,9 +33,9 @@ class SolutionTwo_number1 {
 }
 
 // 방법 3
-class SolutionThree_number1{
-    fun twoSum(nums: IntArray, target: Int) :IntArray{
-        val map : MutableMap<Int, Int> = mutableMapOf()
+class SolutionThree_number1 {
+    fun twoSum(nums: IntArray, target: Int): IntArray {
+        val map: MutableMap<Int, Int> = mutableMapOf()
         nums.forEachIndexed { index, number ->
             val compliement = target - number
             if (map.containsKey(compliement)) return intArrayOf(map[compliement]!!, index)
@@ -51,7 +51,7 @@ class SolutionFore_number1 {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = hashMapOf<Int, Int>()
         nums.forEachIndexed { index, i ->
-            val goal = target -i
+            val goal = target - i
             if (map[goal] != null) return intArrayOf(map[goal]!!, index)
             map[i] = index
         }
@@ -60,12 +60,10 @@ class SolutionFore_number1 {
 }
 
 
-
-
 // 9. Pallindrome Number
 class Solution_number9 {
-    fun isPalindrome(x: Int) :Boolean =
-        x.toString().let{ it == it.reversed() }
+    fun isPalindrome(x: Int): Boolean =
+        x.toString().let { it == it.reversed() }
 }
 
 
@@ -73,7 +71,7 @@ class Solution_number9 {
 
 // 13. Roman to Integer
 class Solution_number13 {
-    fun romanToInt(s: String) : Int {
+    fun romanToInt(s: String): Int {
         val map = mutableMapOf(
             'I' to 1, 'V' to 5, 'X' to 10, 'L' to 50, 'C' to 100, 'D' to 500, 'M' to 1000
         )
@@ -81,10 +79,31 @@ class Solution_number13 {
         val last = 1000
         s.forEach {
             val value = map[it] ?: 0
-            if (value > last) number -= last*2
+            if (value > last) number -= last * 2
             number += value
             last = value
         }
         return number
+    }
+}
+
+
+
+// 14. Longest Common Prefix
+class Solution_number14 {
+    fun longestCommonPrefix(strs: Array<String>) = StringBuilder().apply {
+        strs.minBy { it.length }?.forEachIndexed { i, c -> if (strs.all { it[i] == c }) append(c) else return toString() }
+    }.toString()
+}
+
+class SolutionTwo_number14 {
+    fun longestCommonPrefix(strs: Array<String>): String {
+        if (strs.isEmpty()) return ""
+        if (strs.size == 1) return strs[0]
+        strs.sort()
+        for (i in strs[0].indices) {
+            if (strs[0][i] != strs[strs.size-1][i]) return strs[0].substring(0,i)
+        }
+        return strs[0]
     }
 }
