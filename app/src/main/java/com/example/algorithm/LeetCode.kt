@@ -112,7 +112,7 @@ class SolutionTwo_number14 {
 
 
 // 20. Valid Parentheses
-class Solution {
+class Solution_number20 {
     fun isValid(s: String): Boolean {
         val stack = Stack<Char>()
         s.reversed().forEach {
@@ -124,5 +124,23 @@ class Solution {
             }
         }
         return stack.isEmpty()
+    }
+}
+
+
+// 21. Merge Two Sorted Lists
+class Solution_number21 {
+    fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
+        if (list1 == null) return list2
+        if (list2 == null) return list1
+
+        val (small, large) =
+            if (list1.`val` < list2.`val`)
+                list1 to list2
+            else
+                list2 to list1
+
+        small.next = mergeTwoLists(small.next, large)
+        return small
     }
 }
