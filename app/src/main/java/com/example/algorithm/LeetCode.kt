@@ -144,3 +144,33 @@ class Solution_number21 {
         return small
     }
 }
+
+
+// 26. Remove Duplicates from Sorted Array
+class Solution_number26 {
+    fun removeDuplicates(nums: IntArray): Int {
+        if (nums.isEmpty()) return 0
+
+        var lastIdx = 1
+        var curVal = nums[0]
+
+        nums.forEachIndexed { i, _ ->
+            if (nums[i] > curVal) {
+                curVal = nums[i]
+                nums[lastIdx] = nums[i]
+                lastIdx++
+            }
+        }
+        return lastIdx
+    }
+}
+
+//27. Remove Element
+class Solution_number27 {
+    fun removeElement(nums: IntArray, num: Int): Int {
+        var counter = 0
+        nums.forEach { if (it !=num) nums[counter++] = it }
+
+        return counter
+    }
+}
