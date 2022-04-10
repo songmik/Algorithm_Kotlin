@@ -174,3 +174,24 @@ class Solution_number27 {
         return counter
     }
 }
+
+
+// 28. Implement strStr()
+class Solution_number28 {
+    fun strStr(haystack: String, needle: String): Int {
+        var check = StringBuilder()
+
+        if (needle.isEmpty()) return 0
+
+        for (i in haystack.indices){
+            check.append(haystack[i])
+            if (check.length> needle.length) {
+                check.deleteCharAt(0)
+            }
+            if (check.toString() == needle) {
+                return i-(needle.length-1)
+            }
+        }
+        return -1
+    }
+}
