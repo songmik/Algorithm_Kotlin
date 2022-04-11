@@ -195,3 +195,18 @@ class Solution_number28 {
         return -1
     }
 }
+
+
+// 35. Search Insert Position
+class Solution_number35 {
+    fun searchInsert(nums: IntArray, target: Int): Int {
+        var i = 0
+        while(i < nums.size){
+            if (nums[i] == target) return i
+            if (i == 0 && target < nums[i]) return i
+            if (i > 0 && target > nums[i-1] && target < nums[i]) return i
+            i++
+        }
+        return i
+    }
+}
