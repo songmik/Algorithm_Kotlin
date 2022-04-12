@@ -210,3 +210,31 @@ class Solution_number35 {
         return i
     }
 }
+
+// 53. Maximum Subarray
+class Solution_number53 {
+    fun maxSubArray(nums: IntArray): Int {
+        var max = Int.MIN_VALUE
+        var current = 0
+        nums.forEach {
+            current = maxOf(current + it, it)
+            max = maxOf(max, current)
+        }
+        return max
+    }
+}
+
+// 58. Length of Last Word
+class Solution_number58 {
+    fun lengthOfLastWord(s: String): Int {
+        if (s.isEmpty()) return 0
+        var i = s.length -1
+        var sum = 0
+        while(i >= 0){
+            if (s[i] != ' ') sum++
+            if (s[i] == ' ' && sum != 0) break
+            i--
+        }
+        return sum
+    }
+}
