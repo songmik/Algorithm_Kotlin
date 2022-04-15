@@ -253,3 +253,28 @@ class Solution_number66 {
         return arr
     }
 }
+
+// 67. Add Binary
+class Solution_number67 {
+    fun addBinary(a: String, b: String): String {
+        val target = StringBuilder()
+        var aLast = a.lastIndex
+        var bLast = b.lastIndex
+        var sum = 0
+
+        while(aLast >= 0 || bLast >= 0){
+            if (aLast >= 0) sum += a[aLast--] - '0'
+            if (bLast >= 0) sum += b[bLast--] - '0'
+            if (sum >1) {
+                target.append(sum % 2)
+            } else {
+                target.append(sum)
+            }
+            sum /= 2
+        }
+        if (sum!=0) {
+            target.append(sum)
+        }
+        return target.toString().reversed()
+    }
+}
