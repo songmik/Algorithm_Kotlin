@@ -278,3 +278,22 @@ class Solution_number67 {
         return target.toString().reversed()
     }
 }
+
+//69. Sqrt(x)
+class Solution_number69 {
+    fun mySqrt(x: Int): Int {
+        if (x<2) return x
+
+        var left = 2
+        var right = x /2
+
+        while(left <= right) {
+            var mid = left + ( right - left ) / 2
+            var squareMid: Long = mid.toLong() * mid.toLong()
+            if (squareMid > x) right = mid -1
+            else if (squareMid < x) left = mid + 1
+            else return mid
+        }
+        return right
+    }
+}
