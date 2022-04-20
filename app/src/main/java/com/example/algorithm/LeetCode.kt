@@ -314,3 +314,20 @@ class Solution_number70 {
         return dp[n]
     }
 }
+
+
+// 80. Remove Duplicates from Sorted List
+class Solution_number80 {
+    fun deleteDuplicates(head: ListNode?): ListNode? {
+        var list = head
+        val result = list
+        while (list!=null){
+            if (list.next?.`val` == list.`val`) {
+                list.next = list.next?.next
+                continue
+            }
+            list = list.next
+        }
+        return result
+    }
+}
