@@ -316,8 +316,8 @@ class Solution_number70 {
 }
 
 
-// 80. Remove Duplicates from Sorted List
-class Solution_number80 {
+// 83. Remove Duplicates from Sorted List
+class Solution_number83 {
     fun deleteDuplicates(head: ListNode?): ListNode? {
         var list = head
         val result = list
@@ -329,5 +329,26 @@ class Solution_number80 {
             list = list.next
         }
         return result
+    }
+}
+
+
+// 88. Merge Sorted Array
+class Solution_number88 {
+    fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
+        var idx1 = m - 1
+        var idx2 = n -1
+        var idx = m + n -1
+
+        while(idx >= 0) {
+            val num1 = if (idx1 < 0) Int.MIN_VALUE else nums1[idx1]
+            var num2 = if (idx2 < 0) Int.MIN_VALUE else nums2[idx2]
+
+            num1[idx] = if (num1 < num2 ){
+                --idx1
+                num1
+            }
+            --idx
+        }
     }
 }
