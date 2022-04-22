@@ -352,3 +352,26 @@ class Solution_number88 {
         }
     }
 }
+
+
+// 94. Binary Tree Inorder Traversal
+class Solution_number94 {
+    fun inorderTraversal(root: TreeNode?): List<Int> {
+        var stack = Stack<TreeNode>()
+        var outList = mutableListOf<Int>()
+
+        if (root == null) return outList
+
+        var currNode = root
+        while(currNode != null || !stack.isEmpty()){
+            while(currNode != null){
+                stack.push(currNode)
+                currNode = currNode.left
+            }
+            currNode = stack.pop()
+            outList.add(currNode.`val`)
+            currNode = currNode.right
+        }
+        return outList
+    }
+}
