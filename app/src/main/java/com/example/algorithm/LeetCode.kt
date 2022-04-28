@@ -384,3 +384,22 @@ class Solution_number100 {
         return (p?.`val` == q?.`val`) && isSameTree(p?.left, q?.left) && isSameTree(p?.right, q?.right)
     }
 }
+
+
+// 101. Symmetric Tree
+class Solution_number101 {
+    fun isSymmetric(root: TreeNode?): Boolean {
+        if (root == null)  { return true }
+        return isSubtreeSymmetric(root.left, root.right)
+    }
+
+    private fun isSubtreeSymmetric(left: TreeNode?, right: TreeNode?): Boolean {
+        if (left == null && right == null ){
+            return true
+        }
+        if (left?.`val` != right?.`val`){
+            return false
+        }
+        return isSubtreeSymmetric(left?.lefe, right?.right) && isSubtreeSymmetric(left?.right, right?.left)
+    }
+}
