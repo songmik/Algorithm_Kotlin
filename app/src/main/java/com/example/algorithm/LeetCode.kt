@@ -403,3 +403,10 @@ class Solution_number101 {
         return isSubtreeSymmetric(left?.lefe, right?.right) && isSubtreeSymmetric(left?.right, right?.left)
     }
 }
+
+// 104. Maximum Depth of Binary Tree
+class Solution_number104 {
+    fun maxDepth(root: TreeNode?): Int {
+        return if (root == null) 0 else maxOf(maxDepth(root!!.left), maxDepth(root!!.right)) + 1
+    }
+}
