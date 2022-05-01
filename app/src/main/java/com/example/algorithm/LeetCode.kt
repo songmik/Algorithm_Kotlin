@@ -410,3 +410,24 @@ class Solution_number104 {
         return if (root == null) 0 else maxOf(maxDepth(root!!.left), maxDepth(root!!.right)) + 1
     }
 }
+
+// 108. Convert Sorted Array to Binary Search Tree
+class Solution_number108 {
+    fun sortedArrayToBST(nums: IntArray): TreeNode? {
+        if (nums.size == 0) return null
+
+        return sortedArrayToBSTHelper(nums, 0, nums.lastIndex)
+    }
+
+    fun sortedArrayToBSTHelper(nums: IntArray,  low: Int, high: Int) : TreeNode? {
+        if (low > high) {
+            return null
+        }
+
+        val mid = (low + high) / 2
+        return TreeNode(nums[mid]).apply {
+            left = sortedArrayToBSTHelper(nums, low, mid -1)
+            right = sortedArrayToBSTHelper(nums, mid +1, high)
+        }
+    }
+}
